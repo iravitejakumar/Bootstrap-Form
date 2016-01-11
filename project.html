@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Bootsrap Form</title>
+    <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="project.css">
+</head>
+
+<body background="images/wall1.jpg">
+    <div class="container">
+        <div class="row" style="background-color:lavender;">
+            <div class="col-sm-4" style="background-color:lavender;">
+                <img src="images/logo.png" height="100px" width="100px">
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h1>Bootstrap Form</h1>
+            </div>
+            <div class="col-sm-4" style="background-color:lavender;">
+                <h1>Ravi Teja</h1>
+            </div>
+        </div>
+      <!-- Div for From-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="box">
+                <div>
+                    <h1>Fill This Form</h1>
+                    <form role="form" class="form-horizontal" action="#">
+                        <label for="name" class="col-sm-2 control-label">Name:</label>
+
+                        <div class="form-group col-sm-9" id="namediv">
+
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name" oninput="fnNameValidation()" required>
+                            <span id='nameicon'></span>
+                            <span id="msg"></span>
+                        </div>
+                        <label for="exampleInputAmount" class="col-sm-2 control-label">Amount:</label>
+                        <div class="form-group">
+
+                            <div class="input-group col-sm-8" id="amountdiv">
+
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" id="amount" placeholder="Amount" oninput="fnAmountValidation()" required>
+                                <span id='amounticon'></span>
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                        <label for="password" class="col-sm-2 control-label">Password:</label>
+                        <div class="form-group col-sm-9" id="passworddiv">
+
+                            <input type="Password" class="form-control" id="password" name="pwd" placeholder="Password" oninput="fnPasswordValidation()" required>
+                            <span id='passwordicon'></span>
+                        </div>
+                        <div class="form-group col-sm-9" id="div-radio">
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio" id="saving" value="Savings">Savings</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio" id="saving" value="Current">Current</label>
+                        </div>
+                        <div class="form-group" id="div-radio">
+                            <button class="btn btn-lg btn-primary" type="button" onclick="fnOnSubmit()">Submit</button>
+                            <button class="btn btn-lg btn-primary" type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      <!-- Div for Retriving Output-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="box">
+                <div>Find your details here:</div>
+                <h4>Name:</h4>
+                <span id="nameOutput"> </span>
+                <h4>Amount:</h4>
+                <span id="amountOutput"></span>
+                <h4>Account Type:</h4>
+                <span id="typeOutput"> </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-footer">@copyright 2015</div>
+    <script type="text/javascript" src="project.js"></script>
+</body>
+
+</html>

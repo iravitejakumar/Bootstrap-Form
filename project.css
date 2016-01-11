@@ -1,0 +1,25 @@
+.panel-footer{
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	bottom: 5px;
+	color: white;
+
+}
+#div-radio{
+	margin-left: 81px;
+}
+.box {
+    height: 341px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.16);
+    border: black 3px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 20px;
+}
+#amounticon {
+right:38px;
+z-index: 10;
+}
